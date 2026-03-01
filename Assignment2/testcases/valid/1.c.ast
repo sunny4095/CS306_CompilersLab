@@ -1,0 +1,28 @@
+**PROCEDURE: main
+  Return Type: <void>
+  Formal Parameters:
+**BEGIN: Abstract Syntax Tree 
+Read: Name : num1 _Type<int>
+Read: Name : num2 _Type<int>
+Asgn:
+LHS (Name : greater _Type<int>)
+RHS (
+Condition: OR<bool>
+L_Opd (
+Condition: GE<bool>
+L_Opd (Name : num1 _Type<int>)
+R_Opd (Name : num2 _Type<int>))
+R_Opd (
+Condition: GT<bool>
+L_Opd (
+Arith: Mult <int>
+L_Opd (Name : num1 _Type<int>)
+R_Opd (Name : num2 _Type<int>))
+R_Opd (
+Arith: Plus <int>
+L_Opd (Name : num1 _Type<int>)
+R_Opd (Name : num2 _Type<int>)))
+True_Part (Name : num1 _Type<int>)
+False_Part (Name : num2 _Type<int>))
+Write : Name : greater _Type<int>
+**END: Abstract Syntax Tree 
