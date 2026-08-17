@@ -1,0 +1,28 @@
+
+**BEGIN: RTL Statements
+iload.d: f2 <- 2.100000
+store.d: b <- f2
+iload.d: f2 <- 8.300000
+store.d: c <- f2
+load.d: f2 <- b
+load.d: f6 <- c
+div.d: f4 <- f2, f6
+load.d: f6 <- a
+div.d: f2 <- f4, f6
+load.d: f6 <- b
+mul.d: f4 <- f2, f6
+load.d: f2 <- a
+add.d: f6 <- f2, f4
+iload.d: f2 <- 0.000000
+sle.d: f6, f2
+iload: t0 <- 1
+move: t1 <- zero
+movf: t1 <- t0, 0
+not: t0 <- v0
+bgtz: t0, L0
+load.d: f2 <- a
+iload.d: f6 <- 1.000000
+sub.d: f4 <- f2, f6
+store.d: a <- f4
+goto: L0
+**END: RTL Statements

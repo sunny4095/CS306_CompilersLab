@@ -1,0 +1,17 @@
+PROCEDURE: f**BEGIN RTL STATEMENTSload: v0 <- a
+store: stemp0 <- v0
+goto: L2
+L2:
+load.d: v1 <- stemp0
+return v1
+**END RTL STATEMENTSPROCEDURE: g**BEGIN RTL STATEMENTSiload: v0 <- 0
+store: stemp0 <- v0
+goto: L3
+L3:
+load.d: v1 <- stemp0
+return v1
+**END RTL STATEMENTSPROCEDURE: main**BEGIN RTL STATEMENTSv1 = call f_
+move: v0 <- v1
+v1 = call g_
+move: v0 <- v1
+**END RTL STATEMENTS

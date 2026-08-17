@@ -1,0 +1,32 @@
+load: v0 <- b
+load: t1 <- c
+add: t0 <- v0, t1
+store: d <- t0
+load: v0 <- d
+iload: t1 <- 2
+add: t0 <- v0, t1
+store: stemp0 <- t0
+goto: L2
+L2:
+load.d: v1 <- stemp0
+return v1
+load: v0 <- b
+store: stemp0 <- v0
+goto: L3
+L3:
+load.d: v1 <- stemp0
+return v1
+iload: v0 <- 3
+store: a <- v0
+load: v0 <- a
+push: v0
+load: v0 <- a
+push: v0
+v1 = call f1_
+pop
+pop
+move: v0 <- v1
+store: a <- v0
+iload: v0 <- 1
+load: a0 <- a
+write

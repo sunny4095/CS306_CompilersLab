@@ -1,0 +1,12 @@
+**BEGIN: RTL Statements
+load: v0 <- a
+load: t1 <- b
+sgt: t0 <- v0, t1
+not: v0 <- t0
+bgtz:  <- v0, L0
+load: v0 <- b
+load: t1 <- a
+sub: t0 <- v0, t1
+store: c <- t0
+goto: L0
+**END: RTL Statements

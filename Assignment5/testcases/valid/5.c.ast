@@ -1,0 +1,52 @@
+**PROCEDURE: f_
+  Return Type: <int>
+  Formal Parameters:
+  n_Type<int>
+**BEGIN: Abstract Syntax Tree 
+If:
+Condition (
+Condition: EQ<bool>
+L_Opd (Name : n _Type<int>)
+R_Opd (Num : 0<int>))Then (
+Asgn:
+LHS (Name : ret _Type<int>)
+RHS (Num : 1<int>)
+Return :Name : ret _Type<int>)
+Asgn:
+LHS (Name : k _Type<int>)
+RHS (
+Arith: Minus <int>
+L_Opd (Name : n _Type<int>)
+R_Opd (Num : 1<int>))
+Asgn:
+LHS (Name : ret _Type<int>)
+RHS (
+FN CALL: f_(
+Name : k _Type<int>))
+Asgn:
+LHS (Name : ret _Type<int>)
+RHS (
+Arith: Mult <int>
+L_Opd (Name : n _Type<int>)
+R_Opd (Name : ret _Type<int>))
+Return :Name : ret _Type<int>
+**END: Abstract Syntax Tree 
+**PROCEDURE: main
+  Return Type: <void>
+  Formal Parameters:
+**BEGIN: Abstract Syntax Tree 
+Asgn:
+LHS (Name : b _Type<int>)
+RHS (Num : 5<int>)
+Asgn:
+LHS (Name : a _Type<int>)
+RHS (
+FN CALL: f_(
+Name : b _Type<int>))
+Write : Name : a _Type<int>
+Asgn:
+LHS (Name : m _Type<int>)
+RHS (Num : 2<int>)
+Write : Name : m _Type<int>
+
+**END: Abstract Syntax Tree 

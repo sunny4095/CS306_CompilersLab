@@ -1,0 +1,52 @@
+.text
+.globl f
+f:
+	sw $ra, 0($sp)
+	sw $fp, -4($sp)
+	sub $fp, $sp, 4
+	sub $sp, $sp, 16
+	lw $v0, -12($fp)
+	sw $v0, 0($fp)
+	j L2
+L2:
+	l.d $v1, 0($fp)
+	j epilogue_f
+epilogue_f:
+	add $sp, $sp, 16
+	lw $fp, -4($sp)
+	lw $ra, 0($sp)
+	jr $ra
+.text
+.globl g
+g:
+	sw $ra, 0($sp)
+	sw $fp, -4($sp)
+	sub $fp, $sp, 4
+	sub $sp, $sp, 16
+	li $v0, 0
+	sw $v0, 0($fp)
+	j L3
+L3:
+	l.d $v1, 0($fp)
+	j epilogue_g
+epilogue_g:
+	add $sp, $sp, 16
+	lw $fp, -4($sp)
+	lw $ra, 0($sp)
+	jr $ra
+.text
+.globl main
+main:
+	sw $ra, 0($sp)
+	sw $fp, -4($sp)
+	sub $fp, $sp, 4
+	sub $sp, $sp, 16
+	jal f_
+	move $v0, v1
+	jal g_
+	move $v0, v1
+epilogue_main:
+	add $sp, $sp, 16
+	lw $fp, -4($sp)
+	lw $ra, 0($sp)
+	jr $ra

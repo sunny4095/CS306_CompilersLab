@@ -1,0 +1,40 @@
+**PROCEDURE: f1
+  Return Type: <int>
+  Formal Parameters:
+  c_Type<int>
+  b_Type<int>
+**BEGIN: Abstract Syntax Tree 
+Asgn:
+LHS (Name : d _Type<int>)
+RHS (
+Arith: Plus <int>
+L_Opd (Name : b _Type<int>)
+R_Opd (Name : c _Type<int>))
+Return :
+Arith: Plus <int>
+L_Opd (Name : d _Type<int>)
+R_Opd (Num : 2<int>)
+**END: Abstract Syntax Tree 
+**PROCEDURE: g
+  Return Type: <int>
+  Formal Parameters:
+**BEGIN: Abstract Syntax Tree 
+Return :Name : b _Type<int>
+**END: Abstract Syntax Tree 
+**PROCEDURE: main
+  Return Type: <void>
+  Formal Parameters:
+**BEGIN: Abstract Syntax Tree 
+Asgn:
+LHS (Name : a _Type<int>)
+RHS (Num : 3<int>)
+Asgn:
+LHS (Name : a _Type<int>)
+RHS (
+FN CALL: f1(
+
+Name : a _Type<int>
+Name : a _Type<int>))
+Write : Name : a _Type<int>
+
+**END: Abstract Syntax Tree 
